@@ -1,10 +1,10 @@
 {
 "extName":{
-	"message":"水人人时间表",
-	"description":"RenrenPunchcard"
+	"message":"右键搜索图书馆",
+	"description":"Search Library"
 },
 "extDescript":{
-	"message":"查看好友的水人人时间表",
-	"description":"Show one's activities on renren."
+	"message":"选中书名，右键搜索图书馆",
+	"description":"Select book name and search it in your library."
 }
 }
