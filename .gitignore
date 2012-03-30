@@ -1,0 +1,16 @@
+# ignore various backup files produced by editors
+*~
+*.bak
+*.orig
+*.tmp
+*.swp
+*.swo
+.*.swp
+.*.swo
+*/Thumbs.db
+*.crx
+*.pem
+*.zip
+
+
+tags

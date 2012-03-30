@@ -1,0 +1,13 @@
+{
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDescript__",
+    "version": "0.7",
+    "icons": {
+        "16": "pic_16.png",
+        "48": "pic_48.png",
+        "128": "pic_128.png"
+    },
+    "background_page": "background.html",
+    "permissions": ["contextMenus", "webRequest", "http://*.renren.com/*"],
+    "default_locale":"zh_CN"
+}

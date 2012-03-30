@@ -1,0 +1,1 @@
+Search library by right click
