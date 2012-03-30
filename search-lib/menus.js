@@ -1,4 +1,15 @@
 menuID2getGroupID = {}
+
+function counterPlus() {
+	var counter;
+	if(!localStorage.getItem("counter")) {
+		localStorage["counter"] = 1;
+	} else {
+		counter = parseInt(localStorage.getItem("counter"));
+		localStorage["counter"] = counter+1;
+	}
+}
+
 function getSetGroup() {
 	var setGroup;
 	if(!localStorage.getItem("setGroup")) {
@@ -51,7 +62,8 @@ function genericOnClick(info, tab) {
 	if (getGroupID >= 0) {
 		// normal
 		this_url = getGroup[getGroupID].url.replace(/%TITLE%/g, info.selectionText);
-		chrome.tabs.create({url:this_url});
+		chrome.tabs.create({url:encodeURI(this_url)});
+		counterPlus();
 	} else {
 		// no lib chosen
 		chrome.tabs.create({url:'option.html'});
@@ -71,3 +83,9 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse){
 
 // change Menus
 changeMenus();
+var firsttime;
+if(!localStorage.getItem("firsttime")) {
+	firsttime = false;
+	chrome.tabs.create({url:'option.html'});
+	localStorage["firsttime"] = firsttime;
+}
