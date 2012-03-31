@@ -30,7 +30,7 @@ $(document).ready(function(){
 });
 
 function settings() {
-	console.log('enter setting')
+//	console.log('enter setting')
 	var List = $('.set').toArray();
 	var setGroup = new Array(List.length);
 	if(List) {
@@ -40,5 +40,9 @@ function settings() {
 		}
 	}
 	localStorage["setGroup"] = setGroup;
-	chrome.extension.sendRequest({host:"searchlib", message:"setGroupChanged"}, function(response){console.log(response);})
+	chrome.extension.sendRequest(
+		{host:"searchlib", message:"setGroupChanged"}, 
+		function(response){
+			//console.log(response);
+		});
 }

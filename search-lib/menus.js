@@ -57,7 +57,7 @@ function changeMenus() {
 
 
 function genericOnClick(info, tab) {
-	console.log(info);
+//	console.log(info);
 	getGroupID = menuID2getGroupID[info.menuItemId];
 	if (getGroupID >= 0) {
 		// normal
